@@ -1,3 +1,5 @@
+![Prometheus](https://i.imgur.com/wTlyxkl.png)
+
 # Prometheus Monitoring Solution - Docker Container
 With this project, you'll be able to build your own Prometheus docker container using the Docker Hub official CentOS 7 image, download the prometheus version you want and copying the configuration file you modify to start using Prometheus easily in your environments!
 
