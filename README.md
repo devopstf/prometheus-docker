@@ -20,7 +20,7 @@ If you want to use the makefile, you'll need:
 Simply make use of the common docker commands:
 
 `docker build -t label/prometheus:2.0.0 .` (positioning yourself in the prometheus folder of this project)
-`docker run -p 9090:9090 label/prometheus:2.0.0` 
+and then `docker run -p 9090:9090 label/prometheus:2.0.0` 
 
 ### Build & run with makefile
 Just place yourself where the makefile is and execute the following options:
