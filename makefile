@@ -19,7 +19,11 @@ build: ## Build Prometheus image
 
 run: ## Run the Prometheus container
         @echo "Running Prometheus with default options";
-        @docker run -p ${HOST_PORT}:9090 ${LABEL}/prometheus:${PROMETHEUS_VERSION_FULL} &
+        @docker run -d -p ${HOST_PORT}:9090 ${LABEL}/prometheus:${PROMETHEUS_VERSION_FULL} 
+        
+run-logs: ## Run the Prometheus container without -d parameter to check on logs
+        @echo "Running Prometheus without detach to check on Logs"
+        @docker run -p ${HOST_PORT}:9090 ${LABEL}/prometheus:${PROMETHEUS_VERSION_FULL}
 
 help:
         @grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
