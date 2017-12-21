@@ -32,5 +32,7 @@ EXPOSE 9090
 VOLUME  [ "/opt/prometheus" ]
 WORKDIR ${PROMETHEUS_HOME}
 
+USER prometheus
+
 ENTRYPOINT [ "./prometheus" ]
 CMD        [ "--config.file=prometheus.yml" ]
